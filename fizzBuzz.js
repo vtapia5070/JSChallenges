@@ -38,7 +38,7 @@ function fizzBuzz (x, y, n) {
     } else if (i % x === 0) {
       console.log("F");
     } else if (i % y === 0) {
-      console.log("B")
+      console.log("B");
     } else {
       console.log(i);
     }
