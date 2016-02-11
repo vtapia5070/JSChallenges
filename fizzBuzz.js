@@ -34,17 +34,7 @@ OUTPUT SAMPLE:
 */
 
 function fizzBuzz (x, y, n) {
-  for (var i = 1; i <= n; i++) {
-    if (i % x === 0 && i % y === 0) {
-      console.log("FB");
-    } else if (i % x === 0) {
-      console.log("F");
-    } else if (i % y === 0) {
-      console.log("B");
-    } else {
-      console.log(i);
-    }
-  }
+  // code here
 }
 
 // fizzBuzz(3,5,10); // 1 2 F 4 B F 7 8 F B
