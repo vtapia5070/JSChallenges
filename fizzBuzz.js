@@ -1,4 +1,6 @@
 /*
+* (Provided by CodeEval)
+
 * Players generally sit in a circle. The first player says the number “1”,
 * and each player says next number in turn. However, any number divisible by X 
 * (for example, three) is replaced by the word fizz, and any divisible by Y (for 
@@ -29,6 +31,7 @@ OUTPUT SAMPLE:
 * divisible by Y with “B” and numbers divisible by both with “FB”. Since the input file 
 * contains multiple sets of values, your output should print out one line per set. Ensure 
 * that there are no trailing empty spaces in each line you print.
+<<<<<<< HEAD
 */
 
 function fizzBuzz (x, y, n) {
@@ -43,6 +46,13 @@ function fizzBuzz (x, y, n) {
       console.log(i);
     }
   }
+=======
+
+*/
+
+function fizzBuzz (x, y, n) {
+  // create solution here
+>>>>>>> master
 }
 
 // fizzBuzz(3,5,10); // 1 2 F 4 B F 7 8 F B
