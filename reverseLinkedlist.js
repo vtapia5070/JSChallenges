@@ -25,6 +25,8 @@
 
 // Helper function to generate nodes
 var Node = function(value){
-  return { value: value, next: null };
-
-}
+  return { 
+    value: value,
+    next: null
+  };
+};
