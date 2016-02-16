@@ -30,3 +30,30 @@ var Node = function(value){
     next: null
   };
 };
+
+var ReverseLinkedList = function (node) {
+  var current = node;
+  var prev = null;
+  var next = null;
+  while (current.next !== null) {
+    next = current.next;
+    current.next = prev;
+    prev = current;
+    current = next;
+  }
+  current.next = prev;
+  return current;
+};
+
+var nodeA = Node("A");
+var nodeB = Node("B");
+nodeA.next = nodeB;
+var nodeC = Node("C");
+nodeB.next = nodeC;
+
+console.log(ReverseLinkedList(nodeA));
+/*
+{ value: 'C',
+  next: { value: 'B', next: { value: 'A', next: null } } }
+*/
+

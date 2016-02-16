@@ -26,7 +26,7 @@ LinkedList.prototype.contains = function (val, node) {
   if (node.value === val) {
     return true;
   } else if (node.next) {
-    this.contains(val, node.next);
+    return this.contains(val, node.next);
   } else {
     return false;
   }
@@ -68,4 +68,4 @@ var C = List.addToTail("C");
 { head: { value: 'A', next: { value: 'B', next: [Object] } },
   tail: { value: 'C', next: null } }
 */
-// console.log(List.contains("B"));
+// console.log(List.contains("Z"));
