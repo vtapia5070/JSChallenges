@@ -30,3 +30,7 @@ var Node = function(value){
     next: null
   };
 };
+
+function reverseLinkedList (list) {
+  // code here
+}
