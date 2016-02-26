@@ -1,0 +1,10 @@
+Definiton:
+  Linked Lists are a collection of objects, or nodes, in which each node can form a link, or a reference, to another node.
+  They are references by their relationship with each individal node before or after them.
+
+  The Linkedist usually has a Node constructor function that creates each node, with a value property and next property that will reference another node, or null if it doesn't reference a node yet.
+
+  It also has a class that holds all of the methods that can add and remove nodes, maintaing the head and tail nodes, and other house keeping funtions/information.
+
+Advantages:
+  Linked Lists are a great alternative to using arrays since arrays have a fixed length, and are less efficent when adding or deleting an element.
