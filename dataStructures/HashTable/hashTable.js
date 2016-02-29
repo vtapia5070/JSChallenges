@@ -18,41 +18,51 @@ var hashTable = function(){
   var size = 0;
   
   result.insert = function (key, value) {
+    // index variable
     var index = getIndexBelowMaxForKey(key, this.storageLimit);
+    // check if storage index has any buckets yet
     if (storage[index].length) {
+      // loop through storage
       for (var i = 0; i < storage[index].length; i++) {
+        // check if key-value already exists or if there is an undefined bucket
         if (storage[index][i][0] === key || storage[index][i] === undefined) {
+          // reassign storage[index] bucket's key-value
           storage[index][i] = [key, value];
         } else {
+          // otherwise, add another key-value bucket to index
           storage[index].push([key, value]);
         }
       }
-    } else {
+    } else { 
+      // if storage[index] does not have any buckets create one
       storage[index] = [[key, value]];
     }
   };
 
   result.retrieve = function (key) {
     // index variable
-    // assign index to getIndexBelowMaxForKey with the key argument and max
+    var index = getIndexBelowMaxForKey(key, this.storageLimit);
     // loop through storage of index
-      // check if each iteration's zero index (key) is equal to key
-        // if it is: return value
-    
-    // else return undefined
+    for (var i = 0; i < storage[index].length; i++) {
+      if (storage[index][i][0] === key) {
+        return storage[index][i][1];
+      }
+    }
+    return undefined;
   };
   
   result.remove = function (key) {
     // index variable
-    // assign index to getIndexBelowMaxForKey with the key argument and max
+    var index = getIndexBelowMaxForKey(key, this.storageLimit);
     // loop through storage of index
+    for (var i = 0; i < storage[index].length; i++) {
       // find the key value
+      if (storage[index][i][0] === key) {
         //  delete the key value bucket which going to leave undefined
-      // decrement the size
-      // check storage limit and resize if necessary
-        // if the size if < 3/4th of the storage 
-          // call resize with new size
+        delete storage[index][i];
+        size--;
+      }
+    }
   };
-  
 };
 var myTable = new hashTable();
