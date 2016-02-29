@@ -18,21 +18,20 @@ var hashTable = function(){
   var size = 0;
   
   result.insert = function (key, value) {
-    // create index variable
-    // check if size is 3/4th of storage
-      // if it is: 
-        // pass double storage limit = storage times 2 into resize
-    
-    // increment size
-    // set index to equal getIndexBelowMaxForKey with the key argument and max
-      // loop throught storage[index], 
-        // if iteration's zero index is equal to key reassign value
-        // if iterations value is undefined reassign [key, value]
-        
-      // otherwise push [key, value] into storage of index
+    var index = getIndexBelowMaxForKey(key, this.storageLimit);
+    if (storage[index].length) {
+      for (var i = 0; i < storage[index].length; i++) {
+        if (storage[index][i][0] === key || storage[index][i] === undefined) {
+          storage[index][i] = [key, value];
+        } else {
+          storage[index].push([key, value]);
+        }
+      }
+    } else {
+      storage[index] = [[key, value]];
+    }
   };
 
-  
   result.retrieve = function (key) {
     // index variable
     // assign index to getIndexBelowMaxForKey with the key argument and max
@@ -55,10 +54,5 @@ var hashTable = function(){
           // call resize with new size
   };
   
-  function resize(newSize){
-    // reassign storage to newSize
-     return result;
-  }
-  
-  
 };
+var myTable = new hashTable();
