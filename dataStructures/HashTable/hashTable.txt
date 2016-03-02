@@ -1,6 +1,10 @@
 Definition:
   A hash table is a data structure that is great for storage. It is optimal for data insertion and retrieval. It uses a hashing function, that takes an input value, and outputs an index. The index output from the function is utilized to locate the index in the hash table's storage, where the key-value pair will be stored. The within the index, there are buckets, where one or more key-value pairs can be stored in the instance of a hashing collision.
 
-  The complexity to insert, retrieve, and delete is O(1), O(n) worst case when there is a hashing collision.
+  The complexity to insert, retrieve, and delete is O(1), O(n) worst case when there is a hashing collision. 
+
+  Object is a hash table: has a built in hashing function.
+
+  Great for lowering the time complexity. See if a hash table will work, or javascript object.
 
 
