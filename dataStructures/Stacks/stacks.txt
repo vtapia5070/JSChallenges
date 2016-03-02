@@ -1,1 +1,8 @@
-stacks.txt
+Definition:
+  Stacks are list-like data structure that allow data to be added and removed from the end of the list. 
+
+  A realistic example of this data structure is a stack of papers. The first paper you add papers to the top of the stack and remove the first paper on top rather from the middle or front of the stack. Another realistic example is the Javascript Event Loop. As a javascript program runs, as functions are invoked, they are added to a stack then once their returned they are removed from the top of the stack.
+
+  This data structure usually has a class that contains a storage of all of the data and methods: push (add to stack), push (remove from stack), length (Size of stack), and peek (view data on the top of stack).
+
+  "Last in, first out." (LIFO)
