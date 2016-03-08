@@ -5,6 +5,7 @@ Create a Queue Data structure in pseudoclassical instantiation.
 var Stack = function () {
   this._front = 0;
   this._back = 0;
+  this._storage = {};
 };
 
 var StackMethods = {
@@ -12,8 +13,8 @@ var StackMethods = {
   size: function () {
   },
 
-  push: function (value) {},
+  enqueue: function (value) {},
   
-  pop: function () {}
+  dequeue: function () {}
 
 };
