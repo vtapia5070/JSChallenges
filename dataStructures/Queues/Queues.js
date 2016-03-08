@@ -12,12 +12,12 @@ Queue.prototype.size: function () {
   return this._back - this._front;
 };
 
-Queue.prototype.push: function (value) {
+Queue.prototype.enqueue: function (value) {
   this._back++;
   this._storage[this._back] = value;
 };
 
-Queue.prototype.pop: function () {
+Queue.prototype.dequeue: function () {
   var front = this._storage[this._front];
   delete this._storage[this._front];
   this._front++;
