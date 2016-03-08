@@ -1,0 +1,6 @@
+Definition:
+A queues data structure is a list that has a specific procedure for adding and removing data. In a queue, data is added to the end of the list. When data is removed, the data that is at the front of the list is removed. Queues are great for programs where data is processed from the front of the list. 
+
+A real example of a program that might utilize a queue is a music playlist.
+
+A common metaphor for a Queue data structure is a deli line. Which follows a first-in, first-out sequence, also known as "FIFO".
