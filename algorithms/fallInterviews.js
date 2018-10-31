@@ -70,11 +70,11 @@ const sortReviews = (reviewsList, avgLen) => {
     
 };
 
-console.log(sortReviews(reviews, avgReviewLength));
+// console.log(sortReviews(reviews, avgReviewLength));
 
----------
-depth first recursive problem
-----------
+// ---------
+// depth first recursive problem
+// ----------
 
 // Input:[[4,10,15,24,26], [0,9,12,20], [5,18,22,30]]
 // Output: [20,24]
@@ -99,10 +99,6 @@ index: 0
 [4,10,15,24,26]
 [0,9,12,20]
 [5,18,22,30]
-
-
-
-
 */
 
 const findRange = (list) => {
@@ -110,7 +106,7 @@ const findRange = (list) => {
   
   // loop through subArray
   list.forEach((subArray, index) => { // index: 0
-    
+    console.log('subArray:', subArray);
     let currentLowestIndex = 2; // 2
     // last element
     let highest = subArray[subArray.length-1]; // 26
@@ -124,22 +120,39 @@ const findRange = (list) => {
       if (lowest > list[n][list[n].length-1]) {
         // reset the lowest to be the next highest number in first array
         currentLowestIndex++;
+        highest = lowest;
         lowest = subArray[subArray.length-currentLowestIndex];
-        break;
+        n++;
       }
     }
+    // 15, 24
+    // 12, 20
 
     console.log('lowest after look:', lowest);
-    if (!range) {
+    if (!range.length) {
       range = [lowest, highest];
     } else {
-      if (lowest > range[0]) {
-        range[0] = lowest;
-      }
-      if (highest > range[1]) {
-        range[1] = highest;
-      }
+      // TODO
+      // find range
+      // const currentRange = range[1] - range[0];
+      // const newRange = highest - lowest; 
+
+      // if (lowest < range[1] && lowest > range[0]) {
+      //   range[1] = lowest;
+      // } else if (lowest > range[0] && lowest < range[1]) {
+      //   range[0] = lowest;
+      // }
+      
+      // if (highest < range[1] && highest > range[0]){
+
+      // } else if {
+
+      // }
+      
     }
+
+    console.log('current range:', range);
+    console.log('diff:', range[1] - range[0]);
     
   });
   
