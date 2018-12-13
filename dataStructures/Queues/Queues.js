@@ -1,5 +1,5 @@
 /*
-Create a Queue Data structure in pseudoclassical instantiation.
+Create a Queue Data structure with an array data type.
 */
 
 class Queue {
@@ -20,13 +20,17 @@ class Queue {
     if (this.back === 0) {
       return false;
     }
-    const val = this.storage.pop();
-    this.back--;
+    const val = this.storage.unshift();
+    this.front++;
     return val;
   }
 
   size () {
     return this.storage.length;
+  }
+
+  peak () {
+    return this.storage[this.front];
   }
 }
 
