@@ -2,19 +2,38 @@
 Create a Queue Data structure in pseudoclassical instantiation.
 */
 
-var Stack = function () {
-  this._front = 0;
-  this._back = 0;
-  this._storage = {};
-};
+class Queue {
+  constructor () {
+    this.front = 0;
+    this.back = 0;
+    this.storage = [];
+  }
 
-var StackMethods = {
+  enqueue (val) {
+    console.log(this);
+    this.storage.push(val);
+    this.back = this.storage.length - 1;
+    return true;
+  }
 
-  size: function () {
-  },
+  dequeue () {
+    if (this.back === 0) {
+      return false;
+    }
+    const val = this.storage.pop();
+    this.back--;
+    return val;
+  }
 
-  enqueue: function (value) {},
-  
-  dequeue: function () {}
+  size () {
+    return this.storage.length;
+  }
+}
 
-};
+const Numbers = new Queue();
+Numbers.enqueue(1);
+Numbers.enqueue(2);
+Numbers.enqueue(3);
+Numbers.size(); // 3
+Numbers.dequeue();
+Numbers.size(); // 2
