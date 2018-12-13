@@ -56,7 +56,29 @@ class LinkedList {
     return false;
   }
 
+  clear () {
+    this.head = null;
+    this.tail = null;
+    this.length = null;
+  }
 
+  hasValue (val) {
+    if (this.length === 0) {
+      return false;
+    }
+
+    let currentNode = this.head;
+
+    while (currentNode !== null) {
+      if (currentNode.value === val) {
+        return true;
+      } else {
+        currentNode = currentNode.next;
+      }
+    }
+
+    return false;
+  }
 
 }
 
