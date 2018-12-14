@@ -1,28 +1,31 @@
-function BST (value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
+class Node {
+    constructor(value, left = null, right = null) {
+        this.value = value;
+        this.left = left;
+        this.right = right;
+    }
 }
 
-BST.prototype.addChild = function (value) {
-    var node = value || this.value;
-    while (node.value !== null) {
-
-        if (value < node.value) {
-            // left
-            if (node.left === null) {
-                node.left = new BST(value);
-            } else {
-                node = node.left;
-            }
-        }
-
-        if (value > node.value) {
-            if (node.right === null) {
-                node.right = new BST(value);
-            } else {
-                node = node.right;
-            }
-        }
+class BST {
+    constructor () {
+        this.root = null;
+        this.length = null;
     }
-};
+
+    insert = (val) => {
+        // TODO
+    }
+
+    remove (val) {
+        // TODO
+    }
+
+    search = (val) => {
+        // TODO
+    }
+
+    balance () {
+        // TODO
+    }
+
+}
